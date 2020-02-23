@@ -365,12 +365,7 @@ const char HTTP_HEAD_STYLE3[] PROGMEM =
   "<div style='text-align:center;color:#%06x;'><h3>" D_MINIMAL_FIRMWARE_PLEASE_UPGRADE "</h3></div>"  // COLOR_TEXT_WARNING
 #endif
   "<div style='text-align:center;color:#%06x;'><noscript>" D_NOSCRIPT "<br></noscript>" // COLOR_TITLE
-#ifdef LANGUAGE_MODULE_NAME
-  "<h3>" D_MODULE " %s</h3>"
-#else
-  "<h3>%s " D_MODULE "</h3>"
-#endif
-  "<h2>%s</h2>";
+  "<h2>" FRIENDLY_NAME "</h2>";
 
 const char HTTP_MSG_SLIDER_GRADIENT[] PROGMEM =
   "<div id='%s' class='r' style='background-image:linear-gradient(to right,%s,%s);'>"
@@ -410,12 +405,10 @@ const char HTTP_FORM_MODULE[] PROGMEM =
 const char HTTP_FORM_WIFI[] PROGMEM =
   "<fieldset><legend><b>&nbsp;" D_WIFI_PARAMETERS "&nbsp;</b></legend>"
   "<form method='get' action='wi'>"
-  "<p><b>" D_AP1_SSID "</b> (" STA_SSID1 ")<br><input id='s1' placeholder='" STA_SSID1 "' value='%s'></p>"
-  "<p><b>" D_AP1_PASSWORD "</b><input type='checkbox' onclick='sp(\"p1\")'><br><input id='p1' type='password' placeholder='" D_AP1_PASSWORD "' value='" D_ASTERISK_PWD "'></p>"
-  "<p><b>" D_AP2_SSID "</b> (" STA_SSID2 ")<br><input id='s2' placeholder='" STA_SSID2 "' value='%s'></p>"
-  "<p><b>" D_AP2_PASSWORD "</b><input type='checkbox' onclick='sp(\"p2\")'><br><input id='p2' type='password' placeholder='" D_AP2_PASSWORD "' value='" D_ASTERISK_PWD "'></p>"
-  "<p><b>" D_HOSTNAME "</b> (%s)<br><input id='h' placeholder='%s' value='%s'></p>"
-  "<p><b>" D_CORS_DOMAIN "</b><input id='c' placeholder='" CORS_DOMAIN "' value='%s'></p>";
+  "<p><b>Wifi Name</b> (" STA_SSID1 ")<br><input id='s1' placeholder='" STA_SSID1 "' value='%s'></p>"
+  "<p><b>Wifi Password</b><input type='checkbox' onclick='sp(\"p1\")'><br><input id='p1' type='password' placeholder='" D_AP1_PASSWORD "' value='" D_ASTERISK_PWD "'></p>"
+  "<p><b>" D_HOSTNAME "</b> (%s)<br><input id='h' placeholder='%s' value='%s'></p>";
+
 
 const char HTTP_FORM_LOG1[] PROGMEM =
   "<fieldset><legend><b>&nbsp;" D_LOGGING_PARAMETERS "&nbsp;</b>"
